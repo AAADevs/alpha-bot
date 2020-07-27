@@ -1,0 +1,18 @@
+# requires docker-ce 19.03.0+
+version: '3.8'
+services:
+  python:
+    build: .
+    volumes:
+      - ./:/app
+    command: bash -c 'cd /app && python3 bot.py'
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 50M
+        reservations:
+          cpus: '0.25'
+          memory: 20M 
+
