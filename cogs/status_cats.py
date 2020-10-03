@@ -3,6 +3,7 @@ import random
 import discord
 from discord.ext import commands
 
+
 # All valid status code, which are required while returning a random image of a cat, portraying the status code.
 VALID_CODE = [100, 101, 200, 201, 202, 204, 206, 207, 300, 301, 302, 303, 304, 305, 307, 401, 402, 403, 404, 405, 406,
               400, 408, 409, 410, 411, 412, 413, 414, 415, 416, 417, 418, 421, 422, 423, 424, 425, 426, 429, 431,
