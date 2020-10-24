@@ -1,4 +1,4 @@
-FROM python:3.8
+FROM python:3.8-onbuild
 COPY requirements.txt /app/
 RUN pip install --no-cache-dir -U -r /app/requirements.txt
 
