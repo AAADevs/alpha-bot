@@ -38,6 +38,11 @@ class AlphaBot(commands.Bot):
     async def get_context(self, message, *, cls=AlphaCtx):
         return await super().get_context(message, cls=cls)
 
+    def user_is_admin(self, user):
+        user_roles = [role.id for role in user.roles]
+        if any(role in self.config.get('admin_roles') for role in user_roles):
+            return True
+        return False
 
     def user_is_ignored(self, user):
         user_roles = [role.id for role in user.roles]
